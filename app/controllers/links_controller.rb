@@ -4,9 +4,9 @@ class LinksController < ApplicationController
   # GET /links
   # GET /links.json
   def index
-    @links = Link.all
+    @user = current_user
+    @links = Link.where(user: current_user)
   end
-
   # GET /links/1
   # GET /links/1.json
   def show
@@ -14,9 +14,8 @@ class LinksController < ApplicationController
 
   # GET /links/new
   def new
-    @link = Link.new
+    @link = current_user.links.build
   end
-
   # GET /links/1/edit
   def edit
   end
@@ -24,8 +23,7 @@ class LinksController < ApplicationController
   # POST /links
   # POST /links.json
   def create
-    @link = Link.new(link_params)
-
+    @link = current_user.links.build(link_params)
     respond_to do |format|
       if @link.save
         format.html { redirect_to @link, notice: 'Link was successfully created.' }
