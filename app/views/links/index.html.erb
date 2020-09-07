@@ -1,10 +1,10 @@
-
 <h1>Links</h1>
 
     <% @links.each do |link| %>
-        <%= link.title %>
-
+            <h4 class="card-title"> <%= link_to link.title, link_path(link), class:"text-decoration-none text-muted" %></h4>
     <% end %>
+
+ 
 
 <br />
     <%= link_to 'Add link', new_link_path(@link) %> 
