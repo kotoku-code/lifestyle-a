@@ -2,7 +2,9 @@
 <h1>Links</h1>
 
     <% @links.each do |link| %>
-            <h4 class="card-title"> <%= link_to link.title, link_path(link), class:"text-decoration-none text-muted" %></h4>
+        <% if link.image.present? %>
+            <%= image_tag link.image , class: "card-img-top" %>
+        <% end %>
     <% end %>
 
  
