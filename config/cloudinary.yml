@@ -1,20 +1,20 @@
 production:
   cloud_name: "dbugmxtfj"
-  api_key: "918918745194343"
-  api_secret: "a676b67565c6767a6767d6767f676fe1"
+  api_key: '918918745194343'
+  api_secret: a676b67565c6767a6767d6767f676fe1
   enhance_image_tag: true
   static_file_support: true
   secure: true
   cdn_subdomain: true
 development:
   cloud_name: "dbugmxtfj"
-  api_key: "918918745194343"
+  api_key: '918918745194343'
   api_secret: a676b67565c6767a6767d6767f676fe1
   enhance_image_tag: true
   static_file_support: false
 test:
    cloud_name: "dbugmxtfj"
-  api_key: "918918745194343"
-  api_secret: "a676b67565c6767a6767d6767f676fe1"
+  api_key: '918918745194343'
+  api_secret: a676b67565c6767a6767d6767f676fe1
   enhance_image_tag: true
   static_file_support: false
