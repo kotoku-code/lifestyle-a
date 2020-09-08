@@ -2,12 +2,10 @@
 <h1>Links</h1>
 
     <% @links.each do |link| %>
-        <% if link.image.present? %>
-            <%= image_tag link.image , class: "card-img-top" %>
-        <% end %>
-    <% end %>
+        <h1><%= link_to link.title,link_path(link) %></h1><br />
 
- 
+
+    <% end %> 
 
 <br />
     <%= link_to 'Add link', new_link_path(@link) %> 
