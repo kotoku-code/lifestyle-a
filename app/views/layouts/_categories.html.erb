@@ -1,0 +1,6 @@
+<% Group.all.each do |group|%>      
+        <li class="nav-item">          
+            <li><%= link_to group.name, group_path(group.id), class: 'nav-link font-weight-bold' %></li>      
+        </li>
+
+<% end %>
